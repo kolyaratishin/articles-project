@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/kolyaratishin/articles-project/issues"
   },
-  "homepage": "https://github.com/kolyaratishin/articles-project#readme"
+  "homepage": "https://github.com/kolyaratishin/articles-project#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  }
 }
