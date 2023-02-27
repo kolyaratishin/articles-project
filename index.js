@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const articles = require("./fake-data");
+const serverRoutes = require("./routes/servers.js");
 
 const PORT = process.env.PORT ?? 3000;
 const app = express();
@@ -8,15 +8,9 @@ const app = express();
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "ejs"));
 
+app.use(serverRoutes);
+
 app.listen(PORT, () => {
     console.log(`Server has been started on port ${PORT}`);
 });
-
-app.get("/", (req, res) => {
-    res.render("main");
-})
-
-app.get("/articles", (req, res) => {
-    res.render("articles", {articles});
-})
 
