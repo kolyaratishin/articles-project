@@ -1,0 +1,19 @@
+{
+  "name": "articles-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kolyaratishin/articles-project.git"
+  },
+  "author": "Mykola Ratyshyn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kolyaratishin/articles-project/issues"
+  },
+  "homepage": "https://github.com/kolyaratishin/articles-project#readme"
+}
