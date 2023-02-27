@@ -4,6 +4,9 @@ class ArticleController {
     static getAllArticlesPage = (req, res) => {
         res.render("articles", {articles});
     }
+    static getAddArticlePage = (req, res) => {
+        res.render("add-article");
+    }
 }
 
 

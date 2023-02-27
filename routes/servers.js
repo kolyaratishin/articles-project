@@ -7,4 +7,6 @@ router.get("/", getMainPage);
 
 router.get("/articles", ArticleController.getAllArticlesPage);
 
+router.get("/add-article", ArticleController.getAddArticlePage);
+
 module.exports = router;
