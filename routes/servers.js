@@ -9,4 +9,6 @@ router.get("/articles", ArticleController.getAllArticlesPage);
 
 router.get("/add-article", ArticleController.getAddArticlePage);
 
+router.post("/add-article", ArticleController.addArticle);
+
 module.exports = router;
