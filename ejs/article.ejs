@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partial/head.ejs') %>
+<body>
+<%- include('./partial/navbar.ejs') %>
+
+
+<h1><%= article.title %></h1>
+<p><%= article.text %></p>
+<form>
+    <button type="submit" class="btn btn-primary">Delete</button>
+</form>
+<input type="hidden" value="<%= article.id %>">
+<script src="./js/deleteForm.js"></script>
+</body>
+</html>

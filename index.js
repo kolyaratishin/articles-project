@@ -9,6 +9,7 @@ app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "ejs"));
 
 app.use("/js", express.static(path.join(__dirname, "ejs/js")));
+app.use("/articles/js", express.static(path.join(__dirname, "ejs/js")));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

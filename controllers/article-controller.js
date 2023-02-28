@@ -18,6 +18,14 @@ class ArticleController {
         const article = articles.find(article => article.id === id);
         res.render("article", {article});
     }
+
+    static deleteArticleById = (req, res) => {
+        const id = req.params.id;
+        const article = articles.find(article => article.id === id);
+        const indexOfArticle = articles.indexOf(article);
+        articles.splice(indexOfArticle, 1);
+        res.sendStatus(204);
+    }
 }
 
 
