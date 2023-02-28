@@ -17,6 +17,5 @@ app.use(serverRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server has been started on port ${PORT}`);
-    console.log(path.join(__dirname, "ejs/js"));
 });
 

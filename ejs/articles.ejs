@@ -7,14 +7,16 @@
 
 <div class="row row-cols-1 row-cols-md-4">
     <% articles.forEach(article => { %>
+    <div class="form-group">
         <div class="col mb-4">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title"><%= article.title %></h5>
+                    <h5 class="card-title"><a class="nav-link" href="/article/<%= article.id %>"><%= article.title %></a></h5>
                     <p class="card-text"><%= article.text %></p>
                 </div>
             </div>
         </div>
+    </div>
     <% }); %>
 </div>
 </body>

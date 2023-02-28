@@ -12,6 +12,12 @@ class ArticleController {
         articles.push(article);
         res.send(JSON.stringify(article));
     }
+
+    static getArticleById = (req, res) => {
+        const id = req.params.id;
+        const article = articles.find(article => article.id === id);
+        res.render("article", {article});
+    }
 }
 
 

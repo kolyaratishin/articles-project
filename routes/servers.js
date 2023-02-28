@@ -11,4 +11,6 @@ router.get("/add-article", ArticleController.getAddArticlePage);
 
 router.post("/add-article", ArticleController.addArticle);
 
+router.get("/article/:id", ArticleController.getArticleById);
+
 module.exports = router;
