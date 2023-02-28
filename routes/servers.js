@@ -9,7 +9,7 @@ router.get("/articles", ArticleController.getAllArticlesPage);
 
 router.get("/add-article", ArticleController.getAddArticlePage);
 
-router.post("/add-article", ArticleController.addArticle);
+router.post("/articles", ArticleController.addArticle);
 
 router.get("/articles/:id", ArticleController.getArticleById);
 

@@ -3,7 +3,7 @@ function submitForm(event) {
     let form = document.querySelector("form").elements;
     console.log(form);
 
-    fetch('/add-article', {
+    fetch('/articles/', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
