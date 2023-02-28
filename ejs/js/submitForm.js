@@ -14,7 +14,10 @@ function submitForm(event) {
         })
     })
         .then(response => response.json())
-        .then(response => console.log(JSON.stringify(response)))
+        .then(response => {
+            console.log(JSON.stringify(response));
+            window.location.href = "http://localhost:3000/articles";
+        });
 }
 
 document.querySelector("form").addEventListener("submit", submitForm);
