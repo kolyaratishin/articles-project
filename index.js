@@ -1,9 +1,10 @@
 const express = require("express");
 const path = require("path");
 const serverRoutes = require("./routes/servers.js");
-const {connectToDb, getDb} = require("./db/db");
+const mongoose = require("mongoose").default;
 
 const PORT = process.env.PORT ?? 3000;
+const URL = "mongodb://0.0.0.0:27017/articlesbox";
 const app = express();
 
 app.set("view engine", "ejs");
@@ -18,17 +19,12 @@ app.use(express.urlencoded({extended: false}));
 
 app.use(serverRoutes);
 
-let db;
+mongoose.connect(URL)
+    .then(() => console.log("Connected to database"))
+    .catch((err) => console.log(`DB connection error: ${err}`));
 
-connectToDb((err) => {
-   if(!err) {
-       app.listen(PORT, () => {
-           console.log(`Server has been started on port ${PORT}`);
-       });
-       db = getDb();
-   }else {
-       console.log(`DB connection error: ${err}`)
-   }
+app.listen(PORT, () => {
+    console.log(`Server has been started on port ${PORT}`);
 });
 
 

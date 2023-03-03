@@ -13,7 +13,7 @@ router.get("/update/:id", ArticleController.getUpdateArticlePage);
 
 router.post("/articles", ArticleController.addArticle);
 
-router.get("/articles/:id", ArticleController.getArticleById);
+router.get("/articles/:id", ArticleController.getArticlePageById);
 
 router.delete("/articles/:id", ArticleController.deleteArticleById);
 
